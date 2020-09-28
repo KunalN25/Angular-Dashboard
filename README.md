@@ -1,10 +1,6 @@
 # Angular-Dashboard
 
-
-
-
-
-
+<img src="https://github.com/KunalN25/Angular-Dashboard/blob/master1/read.png">
 In this project the following libraries are used:
 * Angular Material
 * HighCharts.
