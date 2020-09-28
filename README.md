@@ -1,41 +1,28 @@
-# Dashboard
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
-
-# Making of
-
-Youtube: https://youtu.be/FP7Hs8lTy1k
-
-# Buy me a drink? :)
-
-[Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=soufianosse@gmail.com&lc=US&no_note=0&item_name=Buy+me+a+bear&cn=&curency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
-
-# Demo 
-
-![image](https://user-images.githubusercontent.com/4992012/68629236-59dd8b00-04e3-11ea-85f1-cc42419d4949.png)
+# Angular-Dashboard
 
 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In this project the following libraries are used:
+* Angular Material
+* HighCharts.
 
-## Build
+#### Angular Material
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The majority of this project uses <a href="https://material.angular.io/">Angular Material</a>. From this library, I have used the following:
 
-## Running unit tests
+* Icons, cards, dividers, table, paginators
+* Toolbar, sidenav, lists, buttons
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Highcharts
 
-## Running end-to-end tests
+The area graphs and pie chart are taken from the <a href="https://material.angular.io/">Highcharts</a> Library.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Components
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* **Default Component** is the parent component located in layouts folder and has its modules file.
+* **Dashboard** and **Posts Components** in the modules folder are the children of default component and have their imports and services declared in default.modules.ts
+* **Header, Footer** and **Sidebar components** are common throughout the application, that is why they are in shared folder and have their imports declared in shared.modules.ts
+* The shared folder has another three components(**Area, Card** and **Pie**) which can be used anywhere in the application to display charts and pie.
