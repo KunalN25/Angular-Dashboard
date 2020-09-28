@@ -8,10 +8,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-
+  // Emit the click event from header component
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit(): void {
+  }
 
   toggleSideBar() {
     this.toggleSideBarForMe.emit();
@@ -19,7 +20,6 @@ export class HeaderComponent implements OnInit {
       window.dispatchEvent(
         new Event('resize')
       );
-    }, 300);
+    }, 300)
   }
-
 }

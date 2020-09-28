@@ -1,19 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
-import * as Highcharts from 'highcharts';
+import { Component, Input, OnInit } from '@angular/core';
 import HC_exporting from 'highcharts/modules/exporting';
+import * as Highcharts from 'highcharts'
 
 @Component({
-  selector: 'app-widget-pie',
+  selector: 'app-widgets-pie',
   templateUrl: './pie.component.html',
   styleUrls: ['./pie.component.scss']
 })
 export class PieComponent implements OnInit {
 
+  @Input() data = []
+
   Highcharts = Highcharts;
-  chartOptions = {};
-
-  @Input() data = [];
-
+  chartOptions = {}
   constructor() { }
 
   ngOnInit() {
@@ -23,43 +22,37 @@ export class PieComponent implements OnInit {
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie'
-      },
-      title: {
-        text: 'RANDOM DATA'
-      },
-      tooltip: {
+    },
+    title: {
+        text: 'Browser market shares in January, 2018'
+    },
+    tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-      },
-      plotOptions: {
-        pie: {
-          allowPointSelect: true,
-          cursor: 'pointer',
-          dataLabels: {
-            enabled: true,
-            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-          }
+    },
+    exporting: {
+      enabled: true
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
         }
-      },
-      exporting: {
-        enabled: true
-      },
-      credits: {
-        enabled: false
-      },
-      series: [{
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
         name: 'Brands',
         colorByPoint: true,
         data: this.data
-      }]
-    };
-
-    HC_exporting(Highcharts);
-
-    setTimeout(() => {
-      window.dispatchEvent(
-        new Event('resize')
-      );
-    }, 300);
+        }]
+    }
   }
 
 }

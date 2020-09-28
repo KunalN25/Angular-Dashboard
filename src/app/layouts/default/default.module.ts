@@ -5,9 +5,15 @@ import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.componen
 import { RouterModule } from '@angular/router';
 import { PostsComponent } from 'src/app/modules/posts/posts.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 import { DashboardService } from 'src/app/modules/dashboard.service';
+import { MatPaginatorModule, MatTableModule } from '@angular/material';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -18,14 +24,14 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule,
+    SharedModule,      //Has the component declarations for header,footer,sidebar
     MatSidenavModule,
     MatDividerModule,
-    FlexLayoutModule,
     MatCardModule,
     MatPaginatorModule,
     MatTableModule
   ],
+ 
   providers: [
     DashboardService
   ]

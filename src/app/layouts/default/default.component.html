@@ -1,12 +1,18 @@
 <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+<!-- Get the event emitted by header component -->
+<!-- Header of the app -->
 
 <mat-drawer-container>
-    <mat-drawer mode="side" [opened]="sideBarOpen">
-        <app-sidebar></app-sidebar>
+    <mat-drawer mode= "side" [opened]="sideBarOpen">
+        <app-sidebar></app-sidebar>     
+        <!-- SideBar -->
     </mat-drawer>
     <mat-drawer-content>
+        <!-- Content -->
         <router-outlet></router-outlet>
+
     </mat-drawer-content>
 </mat-drawer-container>
 
+<!-- Footer of the app -->
 <app-footer></app-footer>

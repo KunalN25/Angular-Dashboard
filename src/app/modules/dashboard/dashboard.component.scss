@@ -1,9 +1,29 @@
-.stats-cards {
-  .mat-card {
-    overflow: hidden;
-  }
+.stats-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between center;
+    gap: 20px;
+    
 }
 
+mat-card {
+    flex: 25;
+}
+
+.pie-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between center;
+    gap: 20px;
+    .table {
+        flex: 60
+    }
+    .pie {
+        flex: 40;
+    }
+}
+
+// Periodic Elements Table
 table {
-  width: 100%;
+    width: 100%;
 }

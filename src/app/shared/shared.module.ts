@@ -1,25 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { RouterModule } from '@angular/router';
-
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import {  MatDividerModule } from '@angular/material/divider'
+import {  MatToolbarModule } from '@angular/material/toolbar'
+import {  MatIconModule } from '@angular/material/icon'
+import {  MatButtonModule } from '@angular/material/button'
+import {  MatMenuModule } from '@angular/material/menu'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 import { AreaComponent } from './widgets/area/area.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 
+
+
+
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent,
     SidebarComponent,
+    FooterComponent,
     AreaComponent,
     CardComponent,
-    PieComponent
+    PieComponent,
   ],
   imports: [
     CommonModule,
@@ -31,15 +38,16 @@ import { PieComponent } from './widgets/pie/pie.component';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    HighchartsChartModule
+    HighchartsChartModule,
   ],
   exports: [
     HeaderComponent,
-    FooterComponent,
     SidebarComponent,
+    FooterComponent,
     AreaComponent,
     CardComponent,
     PieComponent
+
   ]
 })
 export class SharedModule { }

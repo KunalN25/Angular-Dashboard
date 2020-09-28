@@ -9,13 +9,14 @@ export class DefaultComponent implements OnInit {
 
   sideBarOpen = true;
 
+
   constructor() { }
 
-  ngOnInit() { }
-
+  ngOnInit(): void {
+  }
 
   sideBarToggler() {
-    this.sideBarOpen = !this.sideBarOpen;
+    this.sideBarOpen = !this.sideBarOpen
   }
 
 }
